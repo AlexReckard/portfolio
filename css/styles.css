@@ -1,0 +1,239 @@
+/* Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*  */
+
+    :root {
+        --primary-color: #1a1a1a;
+        --secondary-color: #fafafa;
+    }
+    
+    ::selection {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+    }
+
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      overflow-x: hidden;
+    }
+      
+    body.dark-mode {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+    }
+
+
+
+    body.dark-mode  ::selection {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+    }
+ 
+    /* Hide the default scrollbar */
+    body::-webkit-scrollbar {
+      width: 1em;
+    }
+
+    /* Track */
+    body::-webkit-scrollbar-track {
+      background-color: var(--primary-color);
+    }
+
+    /* Handle */
+    body::-webkit-scrollbar-thumb {
+      background:  #fafafa;
+      border-radius: 5px;
+      border: 1px solid #1A1A1A;
+    }
+
+  .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999; /* Ensure the navbar stays on top */
+  margin: auto;
+  width: auto;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 1.5em;
+}
+
+  
+  .navbar-logo {
+    font-size: 21px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 24px;
+    letter-spacing: 1.2px;
+    margin-left: 5%;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .navbar-links li {
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    margin-right: 20px;
+    margin-top: 5px;
+  }
+  
+  .navbar-links li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    position: relative;
+  }
+  
+  .navbar-links li a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .navbar-links li a:hover::after,
+  .navbar-links li a.active::after {
+    transform: scaleX(1);
+  }
+  
+  .navbar-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-buttons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 20px;
+    color: var(--secondary-color);
+  }
+
+
+  .navbar-buttons .hamburger-toggle {
+    display: none;
+  }
+
+
+ /* hhhhhhheeeeeeeeeeerrrrrrrrrooooooooooo */
+
+  .hero {
+    background-image: url('../images/light.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    color: var(--primary-color);
+
+  }
+  
+  body.dark-mode .hero {
+    background-image: url('../images/dark.png');
+    color: var(--secondary-color);
+  
+  }
+  
+  body.dark-mode .hero .btn {
+    background-color: var(--secondary-color);
+    color: #1A1A1A;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+    margin-left: 33%; /* Adjust the margin-left value as needed */
+
+  }
+  
+  .hero h1 {
+    font-size: 64px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 52px;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 21px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 30px;
+    margin-bottom: 1.1rem;
+    max-width: 775px;
+   
+  }
+  
+  .hero .btn {
+    font-size: 18px;
+    font-weight: 550;
+    font-style: normal;
+    line-height: 30px;
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+   
+  }
+  
+  
+  
+

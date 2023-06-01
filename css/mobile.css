@@ -1,0 +1,112 @@
+@media screen and (max-width: 768px) {
+  /* Navbar Styles */
+  .navbar {
+    padding: 1.2em;
+    position: sticky;
+    z-index: 9999;
+  }
+
+.navbar-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    padding: 10px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 9998;
+    /* Initialize the clip-path to be a small circle at the top right */
+    clip-path: circle(0 at 100% 0);
+}
+
+.navbar-links.active {
+    display: block;
+    opacity: 1;
+    /* When active, apply an animation to gradually change the clip-path to a large circle */
+    animation: clipPathOpen 0.5s ease-out forwards;
+}
+
+.navbar-links.closed {
+    display: block;
+    opacity: 1;
+    /* When closed, apply an animation to gradually change the clip-path to a small circle */
+    animation: clipPathClose 0.5s ease-out forwards;
+}
+
+/* Define the opening animation */
+@keyframes clipPathOpen {
+    from {
+        clip-path: circle(0 at 100% 0);
+    }
+    to {
+        clip-path: circle(150% at 100% 0);
+    }
+}
+
+/* Define the closing animation */
+@keyframes clipPathClose {
+    from {
+        clip-path: circle(150% at 100% 0);
+    }
+    to {
+        clip-path: circle(0 at 100% 0);
+    }
+}
+  
+  .navbar-links li {
+    margin: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .navbar-links.active li {
+    opacity: 1;
+  }
+
+  .navbar-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-buttons .hamburger-toggle {
+    display: flex;
+  }
+
+  .navbar-buttons .dark-mode-toggle {
+    font-size: 16px;
+  }
+  
+  /* Hero Styles */
+  .hero {
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden;
+  }
+
+  .hero-content {
+    max-width: 400px;
+    margin-left: 10%;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 250px;
+    line-height: 1.2;
+  }
+  
+  .hero .btn {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 8px 16px;
+  }
+}
