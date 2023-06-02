@@ -86,7 +86,9 @@ table {
       background:  #fafafa;
       border-radius: 5px;
       border: 1px solid #1A1A1A;
+     
     }
+
 
   .navbar {
   position: sticky;
@@ -233,7 +235,132 @@ table {
     text-decoration: none;
    
   }
-  
-  
+
+  .hero-links p {
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #arrow {
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+    animation: arrowDown 1.7s forwards infinite;
+  }
+
+  @keyframes arrowDown {
+    
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(6px);
+    }
+    
+  }
+
+/*  
   
 
+  .cool-marquee {
+    padding: 20px;
+    background-color: #f1f1f1;
+    width: 100%;
+    overflow: hidden;
+}
+
+.marquee-container {
+    display: flex;
+    align-items: center;
+}
+
+.marquee-text {
+    font-size: 96px;
+    white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke: 1px #1A1A1A;
+}
+
+.marquee-text span {
+    padding-right: 30px;
+    transition: all 0.5s ease-in-out; 
+}
+
+.row-1 {
+    flex: content;
+    animation: marquee-right 15s linear infinite;
+}
+
+.row-2 {
+    flex: content;
+    animation: marquee-left 15s linear infinite;
+}
+
+.marquee-text:hover {
+    animation-duration: 20s;
+}
+
+.marquee-text span:hover {
+    color: #1A1A1A; 
+    -webkit-text-stroke: 0; 
+}
+
+@keyframes marquee-right {
+    0% {
+        transform: translateX(105%);
+    }
+    
+    100% {
+        transform: translateX(-70%);
+    }
+}
+
+@keyframes marquee-left {
+    0% {
+        transform: translateX(-70%);
+    }
+    
+    100% {
+        transform: translateX(105%);
+    }
+}
+
+ */
+
+
+
+ .portfolio-container {
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f0f0f0;
+  -webkit-overflow-scrolling: touch; /* for mobile devices */
+}
+
+.portfolio-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+
+
+.portfolio-item {
+  flex: 0 0 auto;
+  margin-right: 16px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.portfolio-item:last-child {
+  margin-right: 0;
+}
