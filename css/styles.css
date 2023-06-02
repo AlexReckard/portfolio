@@ -364,7 +364,7 @@ table {
   display: flex;
   flex-direction: column; /* stacks the img, title, and description vertically */
   align-items: center;
-  justify-content: space-between; /* distributes space evenly between items */
+  justify-content: space-between; /* distributes space evenly between items for images too */
   width: 350px;
   height: 350px;
   padding: 100px 25px;
