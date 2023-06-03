@@ -395,4 +395,144 @@ body.dark-mode .portfolio-title {
   margin-top: 10px; 
 }
 
+/* about */
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 3em auto;
+  padding: 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  
+}
+
+.about-img img {
+  max-width: 500px;
+  width: 100%; 
+  height: auto;
+}
+
+.about-img p {
+  font-size: 12px;
+  padding: 10px 0;
+  color: var(--third-color);
+}
+
+.about-text {
+  max-width: 600px;
+  
+}
+
+.about-text h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.about-text p {
+  font-size: 1.05em;
+  line-height: 1.9;
+  margin-bottom: 2em;
+  word-wrap: normal;
+}
+
+/* drop cap effect */
+.about-text p:first-of-type::first-letter {
+  font-size: 300%;
+  float: left;
+  padding: 5px 10px 0 0;
+  line-height: 1; 
+}
+
+.about-text p:first-of-type {
+  clear: both;
+}
+
+/* contact section */
+
+.contact-container {
+  max-width: 500px;
+  margin: 3em auto;
+  padding: 3em ;
+}
+
+.contact-container h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.contact-container p {
+  font-size: 1em;
+  padding-bottom: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.form-group {
+  margin-bottom: 1.5em;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: .5em;
+  border: 1px solid var(--primary-color);
+  background: var(--secondary-color);
+}
+
+#confirmation {
+  margin: 0;
+  margin-right: 10px;
+  width: 3%;
+  user-select: none; /* Disable text selection */
+}
+
+
+.submit-btn {
+  background: #333;
+  color: #fff;
+  padding: .5em 1em;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  transition: background .3s;
+}
+
+.submit-btn:hover {
+  background: #444;
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+ 
+  
+}
+
+#button-cover {
+  position: absolute;
+  width: 10%;
+  height: 5%;
+  background-color: transparent;
+  z-index: 9998;
+  cursor: pointer;
+}
+
+#confirm-msg {
+  padding-bottom: 20px;
+}
+
+
+
+
 

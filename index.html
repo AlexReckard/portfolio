@@ -24,8 +24,8 @@
             <ul class="navbar-links">
               <li><a href="#home">Home</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="navbar-buttons">
               <button class="dark-mode-toggle"><i class="fas fa-moon"></i></button>
@@ -99,11 +99,67 @@
           <p class="portfolio-description">A short description of the project goes here.</p>
         </div>
       </section>
+      
+
+      <section id="about" class="about-container">
+        <div class="about-grid">
+          <div class="about-img">
+            <img src="/images/ny2.jpg" alt="photo of alex reckard" />
+            <p>Photo of Me in NYC March 2023</p>
+          </div>
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+              Coming from a small town near Denver, Colorado, I have made my way to a vibrant city near Chicago, Illinois. Growing up, I was regarded as the family's IT specialist due to my family's non-technical background. This early interest sparked a fascination for Front-End Engineering, a field that I've come to enjoy and build my expertise in through self-study. My journey has been filled with constant learning and practical application.
+           </p>
+           <p>
+             When I'm not coding, my interests vary from maintaining an active workout regimen, delving into graphic design, creating compelling videos, to unwinding with video games. These activities not only keep me engaged but also broaden my perspective and refine my creative approach to problem-solving in my professional pursuits.
+           </p>
+           <p>
+             With my growing portfolio reflecting my passion for web development and design, I am enthusiastic about sharing my journey, and not just my work. I'm currently in the process of creating a blog, a platform to dive into my experiences, insights, and personal growth within this ever-evolving field. Additionally, I have a penchant for traveling, and love exploring new places. Exciting updates coming soon. Stay tuned! ✌🏻
+           </p>
+           
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-container">
+        <h2>Contact Me</h2>
+        <p>Let's stay in touch. 😎</p>
+      
+        <form id="contact-form" method="post" action="contact.php">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Name" required>
+          </div>
+      
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Email@example.com" required>
+          </div>
+      
+          <div class="form-group">
+            <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+          </div>
+      
+          <div class="form-group">
+            <label>
+              <input type="checkbox" id="confirmation" required>
+               I'm not a robot 🤖👽
+            </label>
+          </div>
+      
+          <div id="confirm-msg" style="display: none; color: red;">Please confirm you're not a robot before submitting.</div>
+          <div id="button-cover"></div>
+          <button type="submit" class="submit-btn" disabled>Send Message</button>
+        </form>
+      </section>
+      
+    
+    
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-      <script src="/js/throbber.js"></script>
-      <script src="/js/scroll-smooth.js"></script>
+      <script src="js/captcha.js"></script>
+      <script src="js/throbber.js"></script>
+      <script src="js/scroll-smooth.js"></script>
       <script src="js/hamburger-menu.js"></script>
       <script src="js/dark-mode.js"></script>
       <script src="js/rubber-band.js"></script>
