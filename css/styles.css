@@ -392,9 +392,11 @@ body.dark-mode .portfolio-title {
 }
 
 .portfolio-description {
-  font-size: 1rem;
+  font-size: 1em;
+  text-align: center;
   color: var(--third-color); 
   margin-top: 10px; 
+  line-height: 1.5;
 }
 
 /* about */

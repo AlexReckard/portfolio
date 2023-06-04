@@ -613,6 +613,8 @@
     grid-gap: 5%;
     padding: 10% 5%; 
     margin: auto 0;
+    overflow-x: scroll;
+
    
   }
   
@@ -648,7 +650,7 @@
   .portfolio-description {
     font-size: 1.3em;
     font-weight: 400;
-    margin-top: 20px; /* add some spacing between title and description */
+    margin: 40px; /* add some spacing between title and description */
     width: 350px;
     line-height: 1.5;
    
