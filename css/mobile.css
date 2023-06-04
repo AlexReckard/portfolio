@@ -234,3 +234,239 @@
 }
 
 
+/* Styles for tablet screens */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+ /* Navbar Styles */
+ .navbar {
+  padding: 40px;
+ 
+}
+
+.navbar-links {
+  display: none;
+  padding-left: 9%;
+
+}
+
+.navbar-links li {
+  margin: 40px 0;
+  font-size: 1.5em;
+}
+
+.navbar-logo {
+  font-size: 2em;
+  margin-left: 0;
+}
+
+.navbar-buttons .hamburger-toggle {
+  display: block;
+  font-size: 1.75em;
+}
+
+.navbar-buttons .dark-mode-toggle {
+  margin-top: 2px;
+  font-size: 1.5em;
+}
+
+/* Hero Styles */
+.hero {
+  max-height: 100vh;
+}
+
+
+.hero-content {
+  width: 100%;
+  margin-left: 10%;
+}
+
+.hero h1 {
+  font-size: 50px;
+}
+
+.hero p {
+  font-size: 24px;
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+.hero .btn {
+  font-size: 20px;
+
+  padding: 8px 16px;
+}
+
+.hero-links p {
+  
+  font-size: 20px;
+
+}
+
+
+
+/* portfolio */
+
+  
+.portfolio-container {
+  grid-template-columns: repeat(6, minmax(400px, 1fr));
+  grid-gap: 7.5%;
+  padding: 2% 10% 20% 5%; 
+  margin: 1%;
+ 
+}
+
+
+.portfolio-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.portfolio-item {
+
+  
+  padding-bottom: 33%;
+  border-radius: 8px;
+ 
+  color: #333;
+}
+
+
+.portfolio-item img {
+  height: 400px;
+  width: auto;
+ 
+}
+
+.portfolio-title {
+  font-size: 22px;
+  color: var(--primary-color); 
+  display: flex;
+  margin-top: 40px; 
+}
+
+.portfolio-description {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 20px; /* add some spacing between title and description */
+  width: 350px;
+  line-height: 1.5;
+ 
+}
+
+
+/* about section */
+
+.about-container {
+ 
+  margin-top: 0;
+
+}
+
+.about-grid {
+
+  grid-template-columns: 1fr;
+  gap: 10px; 
+ 
+}
+
+.about-img img {
+  width: 100%; /* make the image smaller */
+  height: auto;
+  margin: 1% auto; /* center the image horizontally */
+  padding: 5%; /* add some whitespace around the image */
+  padding-bottom: 0;
+}
+
+
+
+.about-img p {
+  font-size: 16px;
+  margin: 0; /* center the image horizontally */
+  padding: 1% 5%; /* add some whitespace around the image */
+}
+
+
+.about-text {
+  max-width: 100%;
+  
+}
+
+.about-text h2 {
+  margin: auto;
+  font-size: 2em;
+  padding: 2.5% 5%; 
+
+}
+
+.about-text p {
+  width: 90%; 
+  margin: 1% auto; 
+  padding: 3%; 
+  font-size: 1.3em;
+  line-height: 1.5;
+  font-weight: 400;
+
+}
+
+/* drop cap effect */
+.about-text p:first-of-type::first-letter {
+  font-size: 400%;
+ 
+}
+
+
+
+/* contact section */
+
+.contact-container {
+  margin: 5% 0;
+  width: 90%; 
+  padding: 5%;
+  padding-top: 0;
+  
+}
+
+.contact-container h2 {
+  font-size: 2em;
+}
+
+.contact-container p {
+  font-size: 20px;
+  padding-bottom: 32px;
+ 
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  font-size: 20px;
+  padding: .75em;
+  border: 1px solid var(--primary-color);
+  background: var(--secondary-color);
+}
+
+.form-group label {
+
+  font-size: 20px;
+}
+
+#confirmation {
+  width: 3%;
+ 
+}
+
+#confirm-msg {
+  font-size: 20px;
+}
+
+.submit-btn { 
+  font-size: 20px;
+  padding: 1em 2em;
+  
+}
+
+#button-cover {
+  width: 30%;
+  height: 7%;
+  
+}
+
+}
