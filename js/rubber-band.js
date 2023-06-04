@@ -1,4 +1,4 @@
-if (window.matchMedia("(max-width: 768px)").matches) {
+if (window.matchMedia("(max-width: 1440px)").matches) {
   const container = document.getElementById('portfolio');
   const portfolioItems = document.querySelectorAll('.portfolio-item');
   const lastItem = portfolioItems[portfolioItems.length - 1];

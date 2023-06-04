@@ -236,6 +236,64 @@
 
 /* Styles for tablet screens */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+  
+  /* Navbar Styles */
+  .navbar {
+    padding: 20px;
+    position: sticky;
+    z-index: 9999;
+  }
+
+.navbar-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    padding: 10px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 9998;
+    /* Initialize the clip-path to be a small circle at the top right */
+    clip-path: circle(0 at 100% 0);
+}
+
+.navbar-links.active {
+    display: block;
+    opacity: 1;
+    /* When active, apply an animation to gradually change the clip-path to a large circle */
+    animation: clipPathOpen 0.5s ease-out forwards;
+   
+}
+
+.navbar-links.closed {
+    display: block;
+    opacity: 1;
+    /* When closed, apply an animation to gradually change the clip-path to a small circle */
+    animation: clipPathClose 0.5s ease-out forwards;
+}
+
+/* Define the opening animation */
+@keyframes clipPathOpen {
+    from {
+        clip-path: circle(0 at 100% 0);
+    }
+    to {
+        clip-path: circle(150% at 100% 0);
+    }
+}
+
+/* Define the closing animation */
+@keyframes clipPathClose {
+    from {
+        clip-path: circle(150% at 100% 0);
+    }
+    to {
+        clip-path: circle(0 at 100% 0);
+    }
+}
  /* Navbar Styles */
  .navbar {
   padding: 40px;
@@ -398,10 +456,10 @@
 }
 
 .about-text p {
-  width: 90%; 
-  margin: 1% auto; 
-  padding: 3%; 
-  font-size: 1.3em;
+  width: 90%;
+  margin: 1% auto;
+  padding: 3%;
+  font-size: 1.5em;
   line-height: 1.5;
   font-weight: 400;
 
@@ -470,3 +528,243 @@
 }
 
 }
+
+
+
+
+/* large laptop */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+ 
+  
+   /* Navbar Styles */
+   .navbar {
+    padding: 20px;
+    
+  }
+  
+  .navbar-links {
+    
+    padding-left: 9%;
+  
+  }
+
+  .navbar-logo {
+    font-size: 2em;
+  }
+  
+  .navbar-links li {
+    margin: 0 20px;
+    font-size: 1.5em;
+    margin-top: 5px;
+  }
+
+  .navbar-buttons .dark-mode-toggle {
+    margin-top: 4px;
+    font-size: 1.5em;
+  }
+  
+  /* Hero Styles */
+  .hero {
+    max-height: 100vh;
+  }
+  
+  
+  .hero-content {
+    width: 100%;
+    margin-left: 10%;
+  }
+  
+  .hero h1 {
+    font-size: 4em;
+    padding-bottom: 16px;
+  }
+  
+  .hero p {
+    font-size: 1.5em;
+    max-width: 50%;
+    line-height: 1.5;
+    padding-bottom: 16px;
+  }
+  
+  .hero .btn {
+    font-size: 1.1em;
+  
+    padding: 10px 15px;
+  }
+  
+  .hero-links p {
+    
+    font-size: 1.1em;
+  
+  }
+
+  #arrow {
+    margin-left: 5%;
+  }
+  
+  
+  
+  /* portfolio */
+  
+    
+  .portfolio-container {
+ 
+    grid-template-columns: repeat(6, minmax(400px, 1fr));
+    grid-gap: 5%;
+    padding: 10% 5%; 
+    margin: auto 0;
+   
+  }
+  
+  
+  .portfolio-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+  
+  .portfolio-item {
+  
+    
+    padding-bottom: 50%;
+    border-radius: 8px;
+   
+    color: #333;
+  }
+  
+  
+  .portfolio-item img {
+    height: 400px;
+    width: auto;
+   
+  }
+  
+  .portfolio-title {
+    font-size: 1.7em;
+    color: var(--primary-color); 
+    display: flex;
+    margin-top: 40px; 
+  }
+  
+  .portfolio-description {
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-top: 20px; /* add some spacing between title and description */
+    width: 350px;
+    line-height: 1.5;
+   
+  }
+  
+  
+  /* about section */
+  
+  .about-container {
+   
+    margin-top: 0;
+  
+  }
+
+
+  .about-img { 
+    margin: 0 auto;
+    padding-left: 5%;
+    margin-top: 15%;
+  }
+  
+  .about-img img {
+    width: 95%; 
+    height: auto;
+  }
+  
+  
+  
+  .about-img p {
+    font-size: 16px;
+    margin: 0; 
+
+  }
+  
+  
+  .about-text {
+
+    padding: 0;
+    margin: 5%;
+  }
+  
+  .about-text h2 {
+    margin: auto;
+    font-size: 2em;
+    padding: 2.5% 5%; 
+  
+  }
+  
+  .about-text p {
+    width: 100%; 
+    margin: 1% auto; 
+    padding-bottom: 3% ; 
+    font-size: 1.1em;
+    line-height: 1.75;
+    font-weight: 400;
+  
+  }
+  
+  /* drop cap effect */
+  .about-text p:first-of-type::first-letter {
+    font-size: 400%;
+   
+  }
+  
+  
+  
+  /* contact section */
+  .contact-container {
+    max-width: 600px;
+  }
+ 
+  .contact-container h2 {
+    font-size: 2.25em;
+  }
+  
+  .contact-container p {
+    font-size: 20px;
+    padding-bottom: 32px;
+   
+  }
+  
+  .form-group input, .form-group textarea {
+    width: 100%;
+    font-size: 20px;
+    padding: .75em;
+    border: 1px solid var(--primary-color);
+    background: var(--secondary-color);
+  }
+  
+  .form-group label {
+  
+    font-size: 24px;
+  }
+  
+  #confirmation {
+    width: 3%;
+   
+  }
+  
+  #confirm-msg {
+    font-size: 20px;
+  }
+  
+  .submit-btn { 
+    font-size: 20px;
+    padding: 1em 2em;
+    
+  }
+  
+  #button-cover {
+    width: 30%;
+    height: 7%;
+    
+  }
+}
+
+
+
+
