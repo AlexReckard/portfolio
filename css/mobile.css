@@ -638,7 +638,7 @@
     
   .portfolio-items-wrapper {
     grid-template-columns: repeat(6, minmax(425px, 1fr));
-    padding: 0 50px; 
+    padding: 0 40px; 
     justify-content: flex-start;
     margin: 0;
     overflow-y: hidden;
