@@ -310,13 +310,13 @@
 
 .navbar-links {
   display: none;
-  padding-left: 9%;
+  padding-left: 3%;
 
 }
 
 .navbar-links li {
   margin: 40px 0;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .navbar-logo {
