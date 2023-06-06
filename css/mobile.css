@@ -1,3 +1,12 @@
+@supports (-webkit-touch-callout: none) {
+  /* Safari-only CSS here */
+  .navbar-buttons button {
+    width: 0;
+  }
+}
+
+
+
 @media screen and (max-width: 768px) {
 
 
@@ -6,6 +15,7 @@
     padding: 20px;
     position: sticky;
     z-index: 9999;
+    align-content: center;
   }
 
 .navbar-links {
@@ -17,6 +27,7 @@
     background-color: var(--primary-color);
     padding: 10px;
     opacity: 0;
+  
     
     z-index: 9998;
     /* Initialize the clip-path to be a small circle at the top right */
@@ -72,17 +83,21 @@
   }
 
   .navbar-buttons {
-    display: -webkit-flex;
     display: flex;
+    align-content: center;
   }
   
   .navbar-buttons .hamburger-toggle {
     display: block;
+   
+    
   }
 
   .navbar-buttons .dark-mode-toggle {
     font-size: 16px;
-    margin-top: 2px;
+    margin-top: 0;
+
+
   }
   
   /* Hero Styles */
