@@ -203,6 +203,12 @@
   
   }
   
+  .about-text p:first-of-type::first-letter {
+    font-size: 300%;
+    float: left;
+    padding: 5px 10px 0 0;
+    line-height: 1; 
+  }
 
 
 
@@ -452,6 +458,13 @@
   font-weight: 400;
 
 }
+
+  
+.about-text p:first-of-type::first-letter {
+
+  line-height: .8; 
+}
+
 
 
 
