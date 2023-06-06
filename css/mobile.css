@@ -38,25 +38,28 @@
     animation: clipPathClose 0.5s ease-out forwards;
 }
 
-/* Define the opening animation */
 @keyframes clipPathOpen {
-    from {
-        clip-path: circle(0 at 100% 0);
-    }
-    to {
-        clip-path: circle(150% at 100% 0);
-    }
+  from {
+      -webkit-clip-path: circle(0 at 100% 0);
+      clip-path: circle(0 at 100% 0);
+  }
+  to {
+      -webkit-clip-path: circle(150% at 100% 0);
+      clip-path: circle(150% at 100% 0);
+  }
 }
 
-/* Define the closing animation */
 @keyframes clipPathClose {
-    from {
-        clip-path: circle(150% at 100% 0);
-    }
-    to {
-        clip-path: circle(0 at 100% 0);
-    }
+  from {
+      -webkit-clip-path: circle(150% at 100% 0);
+      clip-path: circle(150% at 100% 0);
+  }
+  to {
+      -webkit-clip-path: circle(0 at 100% 0);
+      clip-path: circle(0 at 100% 0);
+  }
 }
+
   
   .navbar-links li {
     margin: 10px;
@@ -69,11 +72,14 @@
   }
 
   .navbar-buttons {
+    display: -webkit-flex;
     display: flex;
-    align-items:flex-end;
-    justify-content:flex-end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    -webkit-justify-content: space-between; /* Or try using space-around */
+    justify-content: space-between;
   }
-
+  
   .navbar-buttons .hamburger-toggle {
     display: flex;
   }
