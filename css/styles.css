@@ -127,7 +127,7 @@ table {
     font-style: normal;
     line-height: 24px;
     letter-spacing: 1.2px;
-    margin-left: 5%;
+    
   }
   
   .navbar-links {
@@ -166,18 +166,17 @@ table {
     transform: scaleX(1);
   }
   
-  .navbar-buttons {
-    display: flex;
-    align-items: center;
-  }
   
   .navbar-buttons button {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    margin-left: 10px;
     font-size: 20px;
     color: var(--secondary-color);
+  }
+
+  .navbar-buttons .dark-mode-toggle {
+    margin-top: 2px;
   }
 
 
@@ -356,8 +355,7 @@ body.dark-mode .portfolio-title {
   
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Create two equally wide columns */
-  gap: 2em; /* Add some space between columns */
- 
+  max-width: 1200px;
 }
 
 .about-img img {
@@ -370,12 +368,6 @@ body.dark-mode .portfolio-title {
   padding: 10px 0;
   color: var(--third-color);
 }
-
-.about-text {
-  max-width: 550px;
-  
-}
-
 
 .about-text p {
   font-size: 1.2em;
