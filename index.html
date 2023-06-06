@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/mobile.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
-
+  
 </head>
 
 
@@ -56,33 +56,33 @@
     </div>
     <div class="portfolio-grid">
       <div class="portfolio-item">
-        <img src="/images/Frame 1.png" alt="apple wwdc 2022 ui mockup">
+        <img class="lazy" src="/images/Frame 1.png"  data-src="/images/Frame 1.png" alt="apple wwdc 2022 ui mockup">
         <h3 class="portfolio-title">Apple WWDC 2022</h3>
         <p class="portfolio-description">A recreation of Apple's WWDC 2022 event page, capturing the essence of Apple's sleek and minimalist design philosophy.</p>
       </div>
       <div class="portfolio-item">
-        <img src="/images/Frame 2.png" alt="shoe store ui mockup">
+        <img class="lazy" src="/images/Frame 2.png" data-src="/images/Frame 2.png" alt="shoe store ui mockup">
         <h3 class="portfolio-title">360 Shoe Store</h3>
         <p class="portfolio-description">An e-commerce clone of StockX, featuring interactive 360° shoe images, demonstrating my ability to work with intricate details.</p>
       </div>
        
       <div class="portfolio-item">
-        <img src="/images/Frame 3.png" alt="travel ui mockup">
+        <img class="lazy" src="/images/Frame 3.png" data-src="/images/Frame 3.png" alt="travel ui mockup">
         <h3 class="portfolio-title">Travel Site</h3>
         <p class="portfolio-description">A vibrant and engaging homepage design for a travel site, built to inspire and with easy navigation for potential travelers.</p>              
       </div>
       <div class="portfolio-item">
-        <img src="/images/Frame 4.png" alt="sushi restaurant ui mockup">
+        <img class="lazy" src="/images/Frame 4.png" data-src="/images/Frame 4.png" alt="sushi restaurant ui mockup">
         <h3 class="portfolio-title">Sushi Restaurant</h3>
         <p class="portfolio-description">One of my initial projects, a sushi restaurant that has modern design elements to create a unique dining experience online.</p>
       </div>
       <div class="portfolio-item">
-        <img src="/images/Frame 5.png" alt="furniture ui mockup">
+        <img class="lazy" src="/images/Frame 5.png" data-src="/images/Frame 5.png" alt="furniture ui mockup">
         <h3 class="portfolio-title">Furniture Store</h3>
         <p class="portfolio-description">User-friendly UI mockup design for a furniture store, showcasing visual aesthetics.</p>
       </div>
       <div class="portfolio-item">
-        <img src="/images/Frame 6.png" alt="coffee shop ui mockup">
+        <img class="lazy" src="/images/Frame 6.png" data-src="/images/Frame 6.png" alt="coffee shop ui mockup">
         <h3 class="portfolio-title">Coffee Shop</h3>
         <p class="portfolio-description">A simple cozy coffee shop website layout, blending a warm aesthetic with an easy-to-navigate user interface.</p>
       </div>
@@ -97,7 +97,7 @@
     </div>
     <div class="about-grid">
       <div class="about-img">
-        <img src="/images/ny2.jpg" alt="photo of alex reckard" />
+        <img class="lazy" src="/images/ny2.jpg" data-src="/images/ny2.jpg" alt="photo of alex reckard" />
         <p>Photo of Me in NYC March 2023</p>
       </div>
       <div class="about-text">
@@ -147,8 +147,9 @@
 
     </main>
 
-     
+
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="/js/lazy.js"></script>
       <script src="js/captcha.js"></script>
       <script src="js/throbber.js"></script>
       <script src="js/scroll-smooth.js"></script>
