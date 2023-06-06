@@ -1,14 +1,14 @@
-@supports (-webkit-touch-callout: none) {
-  /* Safari-only CSS here */
-  .navbar-buttons button {
-    width: 0;
-  }
-}
 
 
 
 @media screen and (max-width: 768px) {
-
+  @supports (-webkit-touch-callout: none) {
+    /* Safari-only CSS here */
+    .navbar-buttons button {
+      width: 0;
+    }
+  }
+  
 
   /* Navbar Styles */
   .navbar {
