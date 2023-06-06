@@ -74,14 +74,10 @@
   .navbar-buttons {
     display: -webkit-flex;
     display: flex;
-    -webkit-align-items: flex-end;
-    align-items: flex-end;
-    -webkit-justify-content: space-between; /* Or try using space-around */
-    justify-content: space-between;
   }
   
   .navbar-buttons .hamburger-toggle {
-    display: flex;
+    display: block
   }
 
   .navbar-buttons .dark-mode-toggle {
@@ -332,8 +328,6 @@
 
 .navbar-buttons {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .navbar-buttons .hamburger-toggle {
