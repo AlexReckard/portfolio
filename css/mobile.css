@@ -1,7 +1,6 @@
 @media screen and (max-width: 768px) {
 
 
-
   /* Navbar Styles */
   .navbar {
     padding: 20px;
@@ -18,7 +17,7 @@
     background-color: var(--primary-color);
     padding: 10px;
     opacity: 0;
-
+    overflow: hidden;
     z-index: 9998;
     /* Initialize the clip-path to be a small circle at the top right */
     clip-path: circle(0 at 100% 0);
@@ -71,8 +70,8 @@
 
   .navbar-buttons {
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
   }
 
   .navbar-buttons .hamburger-toggle {
@@ -94,8 +93,7 @@
 
   .hero-content {
     max-width: 400px;
-    padding: 0;
-    margin-left: 10%;
+    margin-left: 10px;
   }
   
   .hero h1 {
@@ -103,10 +101,10 @@
   }
   
   .hero p {
-    font-size: 18px;
-    font-weight: 400;
-    max-width: 300px;
-    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 250px;
+    line-height: 1.2;
   }
   
   .hero .btn {
@@ -118,36 +116,32 @@
 
   /* portfolio */
 
-  .portfolio-heading h2 {
-    width: 100%;
-    text-align: left; 
-    margin: 5% 10%;
-    padding-bottom: 1em;
-    font-size: 2em;
+  .section-heading {
+    text-align: center;
+    margin: 40px 0;
   }
-  
 
-  .portfolio-items-wrapper {
+
+    
+  .portfolio-grid {
     grid-template-columns: repeat(6, minmax(315px, 1fr));
-    padding: 0 25px; 
+    padding: 0 25px 20px 20px;
     justify-content: flex-start;
     margin: 0;
     overflow-y: hidden;
     overflow-x: scroll;
   }
 
-  .portfolio-items-wrapper::-webkit-scrollbar-thumb {
+
+  .portfolio-grid::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 10px;
-
-
   }
-  .portfolio-item {
-    padding-bottom: 120px;
-  }
+
   .portfolio-item img {
-    height: auto;
-    width: 300px;
+    height: 300px;
+    width: auto;
+   
   }
 
   .portfolio-description {
@@ -162,35 +156,25 @@
   
 /* about section */
 
-.about-heading h2 {
-  width: 100%;
-  text-align: left; 
-  margin: 0 10%;
-  font-size: 1em;
-}
-
   .about-container {
     flex-direction: column;
-    align-items: flex-start;
-    margin-top: 1em;
 
   }
   
   .about-grid {
 
     grid-template-columns: 1fr;
-    gap: 10px; 
+    gap: 20px; 
    
   }
 
   .about-img img {
     width: 90%; /* make the image smaller */
     height: auto;
-    margin: 1% auto; /* center the image horizontally */
-    padding: 0 5%; /* add some whitespace around the image */
-  }
+    margin: 1% auto; 
+    padding: 0 5%;
 
-  
+  }
 
   .about-img p {
     margin: 0; /* center the image horizontally */
@@ -203,9 +187,14 @@
     
   }
   
-
+  .about-text h2 {
+    margin: 20px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  
   .about-text p {
-    width: 95%; 
+    width: 90%; 
     margin: 1% auto; 
     padding: 3%; 
     font-size: 16px;
@@ -225,8 +214,9 @@
   /* contact section */
 
   .contact-container {
-    margin: 1em 0 2em 0;
-    padding: 0 7.5%;
+    width: 90%; 
+ 
+    padding: 0 5%;
   }
 
   .form-group input, .form-group textarea {
@@ -307,11 +297,6 @@
         clip-path: circle(0 at 100% 0);
     }
 }
- /* Navbar Styles */
- .navbar {
-  padding: 20px 40px;
- 
-}
 
 .navbar-links {
   display: none;
@@ -335,7 +320,8 @@
 }
 
 .navbar-buttons .dark-mode-toggle {
-  font-size: 1.6em;
+  margin-top: 2px;
+  font-size: 1.5em;
 }
 
 /* Hero Styles */
@@ -375,70 +361,57 @@
 
 /* portfolio */
 
-.portfolio-heading h2 {
-  width: 100%;
-  text-align: left; 
-  margin: 5% 7.5%;
-  padding-bottom: 1em;
-  font-size: 2em;
-}
-
   
-.portfolio-items-wrapper {
-  grid-template-columns: repeat(6, minmax(350px, 1fr));
-  padding: 0 4%; 
-  justify-content: flex-start;
-  margin: 0;
-  overflow-y: hidden;
-  overflow-x: scroll;
+.portfolio-grid {
+  grid-template-columns: repeat(6, minmax(400px, 1fr));
+  padding: 0 25px 20px 20px;
+ 
 }
 
 
-
-.portfolio-items-wrapper::-webkit-scrollbar-thumb {
+.portfolio-grid::-webkit-scrollbar-thumb {
   background-color: #888;
   border-radius: 10px;
 }
 
+.portfolio-item {
+  border-radius: 8px;
+ 
+  color: #333;
+}
+
+
 .portfolio-item img {
-  height: auto;
-  width: 300px;
+  height: 350px;
+  width: auto;
+ 
 }
-
-.portfolio-description {
-  font-size: 1rem;
-  color: #777777; /* or any color you prefer */
-  margin-top: 10px; /* add some spacing between title and description */
-  width: 300px;
-  line-height: 1.3;
-  text-align: center;
-}
-
 
 .portfolio-title {
   font-size: 22px;
   color: var(--primary-color); 
   display: flex;
+  margin-top: 40px; 
+}
+
+.portfolio-description {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 20px; /* add some spacing between title and description */
+  width: 350px;
+  line-height: 1.5;
+ 
 }
 
 
 /* about section */
 
 
-.about-heading h2 {
-  width: 100%;
-  text-align: left; 
-  margin: 0 7%;
-  font-size: 1em;
-}
-
 .about-container {
  
   margin-top: 0;
 
 }
-
-
 
 .about-grid {
 
@@ -448,10 +421,10 @@
 }
 
 .about-img img {
-  width: 100%; /* make the image smaller */
+  width: 50%; /* make the image smaller */
   height: auto;
-  margin: 0; 
-  padding: 5%; 
+  margin: 1% auto; /* center the image horizontally */
+  padding: 5%; /* add some whitespace around the image */
   padding-bottom: 0;
 }
 
@@ -459,13 +432,13 @@
 
 .about-img p {
   font-size: 16px;
-  margin: 0; 
-  padding: 1% 5%;
+  margin: 0; /* center the image horizontally */
+  padding: 1% 5%; /* add some whitespace around the image */
 }
 
 
 .about-text {
-  max-width: 100%;
+  max-width: 800px;
   
 }
 
@@ -477,10 +450,9 @@
 }
 
 .about-text p {
-  width: 90%;
-  margin: 1% 0;
-  padding: 2.5% 5%;
-  font-size: 1.5em;
+  margin: 1% auto;
+  padding: 1% 5%;
+  font-size: 1.1em;
   line-height: 1.5;
   font-weight: 400;
 
@@ -488,7 +460,7 @@
 
 /* drop cap effect */
 .about-text p:first-of-type::first-letter {
-  font-size: 300%;
+  font-size: 400%;
  
 }
 
@@ -497,10 +469,10 @@
 /* contact section */
 
 .contact-container {
-  margin: 0;
-  width: 100%; 
-  padding: 7.5%;
-  padding-top: 5%;
+  margin: 5% 0;
+  width: 90%; 
+  padding: 5%;
+  padding-top: 0;
   
 }
 
@@ -559,7 +531,7 @@
   
    /* Navbar Styles */
    .navbar {
-    padding: 15px;
+    padding: 20px;
     
   }
   
@@ -574,14 +546,14 @@
   }
   
   .navbar-links li {
-    margin: 0 10px;
-    font-size: 1em;
+    margin: 0 20px;
+    font-size: 16px;
     margin-top: 5px;
   }
 
   .navbar-buttons .dark-mode-toggle {
     margin-top: 4px;
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   
   /* Hero Styles */
@@ -593,7 +565,6 @@
   .hero-content {
     width: 100%;
     margin-left: 10%;
-    padding: 0;
   }
   
   .hero h1 {
@@ -628,84 +599,76 @@
   
   /* portfolio */
 
-  .portfolio-heading h2 {
-    width: 100%;
-    text-align: left; 
-    margin: 5%;
-    margin-bottom: 2.5%;
-    font-size: 2em;
+
+  .section-heading {
+    margin: 60px 0 40px 0;
   }
   
     
-  .portfolio-items-wrapper {
-    grid-template-columns: repeat(6, minmax(425px, 1fr));
-    padding: 0 40px; 
-    justify-content: flex-start;
-    margin: 0;
-    overflow-y: hidden;
+  .portfolio-grid {
+ 
+    grid-template-columns: repeat(6, minmax(400px, 1fr));
+    grid-gap: 5%;
+    padding: 0 5%; 
+    margin: auto 0;
     overflow-x: scroll;
+
+   
   }
   
-  .portfolio-items-wrapper::-webkit-scrollbar-thumb {
+  
+  .portfolio-grid::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 10px;
   }
   
+  .portfolio-item {
+    border-radius: 8px;
+   
+    color: #333;
+  }
+  
+  
   .portfolio-item img {
-    height: auto;
-    width: 375px;
+    height: 400px;
+    width: auto;
+   
+  }
+  
+  .portfolio-title {
+    font-size: 1.7em;
+    color: var(--primary-color); 
+    display: flex;
+    margin-top: 40px; 
   }
   
   .portfolio-description {
-    font-size: 1rem;
-    color: #777777; /* or any color you prefer */
-    margin-top: 10px; /* add some spacing between title and description */
+    font-size: 1.3em;
+    font-weight: 400;
+    margin: 40px; /* add some spacing between title and description */
     width: 350px;
     line-height: 1.5;
-    text-align: center;
+   
   }
-  
-  
-  
-  .portfolio-title {
-    font-size: 1.2em;
-    color: var(--primary-color); 
-    display: flex;
-    
-  }
-  
   
   
   /* about section */
   
-
-  .about-heading {
-    width: 100%;
-    text-align: left; 
-    padding-top: 1em;
-    margin-left: 5%;
-  }
-
   .about-container {
    
     margin-top: 0;
   
   }
 
-  .about-grid {
-    padding: 25px 50px;
-    display: flex; /* make the grid a flex container */
-    align-items: start; /* align the items to start from the same point at the top */
-  }
 
-
-  .about-img {
-    flex: 1; /* distribute space equally between the img and the text */
-    margin-top: 16px;
+  .about-img { 
+    margin-top: 10%;
+    padding-left: 5%;
+   
   }
   
   .about-img img {
-    width: 100%; 
+    width: 95%; 
     height: auto;
   }
   
@@ -716,25 +679,38 @@
     margin: 0; 
 
   }
-  
-  .about-text {
-    flex: 1; /* distribute space equally between the img and the text */
+
+  .about-grid {
+    gap: 0;
   }
   
   
+  .about-text {
+
+    padding: 0;
+    margin: 7.5% 0;
+  }
+  
+  .about-text h2 {
+    margin: auto;
+    font-size: 2em;
+    padding: 2.5% 5%; 
+  
+  }
+  
   .about-text p {
-    width: 500px; 
-    margin: 1% 0; 
-    padding-bottom: 5% ; 
-    font-size: 1em;
-    line-height: 1.6;
+    width: 475px ;
+    margin: 1% auto; 
+    padding-bottom: 3% ; 
+    font-size: 1.1em;
+    line-height: 1.55;
     font-weight: 400;
   
   }
   
   /* drop cap effect */
   .about-text p:first-of-type::first-letter {
-    font-size: 400%;
+    font-size: 300%;
    
   }
   
@@ -746,17 +722,17 @@
   }
  
   .contact-container h2 {
-    font-size: 2em;
+    font-size: 2.25em;
   }
   
   .contact-container p {
-    font-size: 18px;
+    font-size: 20px;
     padding-bottom: 32px;
    
   }
   
   .form-group input, .form-group textarea {
-    width: 90%;
+    width: 100%;
     font-size: 20px;
     padding: .75em;
     border: 1px solid var(--primary-color);
@@ -765,7 +741,7 @@
   
   .form-group label {
   
-    font-size: 18px;
+    font-size: 24px;
   }
   
   #confirmation {
