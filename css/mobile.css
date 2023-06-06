@@ -78,15 +78,11 @@
   
   .navbar-buttons .hamburger-toggle {
     display: block;
-    margin: 0 10px;
-    padding: 0;
-  
   }
 
   .navbar-buttons .dark-mode-toggle {
     font-size: 16px;
-    margin: 2px 0 0 0;
-    padding: 0;
+    margin-top: 0;
   }
   
   /* Hero Styles */
