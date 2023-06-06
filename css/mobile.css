@@ -1,6 +1,7 @@
 @media screen and (max-width: 768px) {
 
 
+
   /* Navbar Styles */
   .navbar {
     padding: 20px;
@@ -17,7 +18,7 @@
     background-color: var(--primary-color);
     padding: 10px;
     opacity: 0;
-    overflow: hidden;
+
     z-index: 9998;
     /* Initialize the clip-path to be a small circle at the top right */
     clip-path: circle(0 at 100% 0);
@@ -70,8 +71,8 @@
 
   .navbar-buttons {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 
   .navbar-buttons .hamburger-toggle {
@@ -93,7 +94,8 @@
 
   .hero-content {
     max-width: 400px;
-    margin-left: 10px;
+    padding: 0;
+    margin-left: 10%;
   }
   
   .hero h1 {
@@ -101,10 +103,10 @@
   }
   
   .hero p {
-    font-size: 20px;
-    font-weight: 500;
-    max-width: 250px;
-    line-height: 1.2;
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 300px;
+    line-height: 1.5;
   }
   
   .hero .btn {
@@ -116,32 +118,36 @@
 
   /* portfolio */
 
-  .section-heading {
-    text-align: center;
-    margin: 40px 0;
+  .portfolio-heading h2 {
+    width: 100%;
+    text-align: left; 
+    margin: 5% 10%;
+    padding-bottom: 1em;
+    font-size: 2em;
   }
+  
 
-
-    
-  .portfolio-grid {
+  .portfolio-items-wrapper {
     grid-template-columns: repeat(6, minmax(315px, 1fr));
-    padding: 0 25px 20px 25px;    
+    padding: 0 25px; 
     justify-content: flex-start;
     margin: 0;
     overflow-y: hidden;
     overflow-x: scroll;
   }
 
-
-  .portfolio-grid::-webkit-scrollbar-thumb {
+  .portfolio-items-wrapper::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 10px;
-  }
 
+
+  }
+  .portfolio-item {
+    padding-bottom: 120px;
+  }
   .portfolio-item img {
-    height: 300px;
-    width: auto;
-   
+    height: auto;
+    width: 300px;
   }
 
   .portfolio-description {
@@ -156,25 +162,35 @@
   
 /* about section */
 
+.about-heading h2 {
+  width: 100%;
+  text-align: left; 
+  margin: 0 10%;
+  font-size: 1em;
+}
+
   .about-container {
     flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1em;
 
   }
   
   .about-grid {
 
     grid-template-columns: 1fr;
-    gap: 20px; 
+    gap: 10px; 
    
   }
 
   .about-img img {
     width: 90%; /* make the image smaller */
     height: auto;
-    margin: 1% auto; 
-    padding: 0 5%;
-
+    margin: 1% auto; /* center the image horizontally */
+    padding: 0 5%; /* add some whitespace around the image */
   }
+
+  
 
   .about-img p {
     margin: 0; /* center the image horizontally */
@@ -187,14 +203,9 @@
     
   }
   
-  .about-text h2 {
-    margin: 20px;
-    font-weight: 600;
-    line-height: 1.5;
-  }
-  
+
   .about-text p {
-    width: 90%; 
+    width: 95%; 
     margin: 1% auto; 
     padding: 3%; 
     font-size: 16px;
@@ -202,16 +213,20 @@
     font-weight: 400;
   
   }
-
+  
+  /* drop cap effect */
+  .about-text p:first-of-type::first-letter {
+    font-size: 400%;
+   
+  }
 
 
 
   /* contact section */
 
   .contact-container {
-    width: 90%; 
- 
-    padding: 0 5%;
+    margin: 1em 0 2em 0;
+    padding: 0 7.5%;
   }
 
   .form-group input, .form-group textarea {
@@ -292,6 +307,11 @@
         clip-path: circle(0 at 100% 0);
     }
 }
+ /* Navbar Styles */
+ .navbar {
+  padding: 20px 40px;
+ 
+}
 
 .navbar-links {
   display: none;
@@ -315,8 +335,7 @@
 }
 
 .navbar-buttons .dark-mode-toggle {
-  margin-top: 2px;
-  font-size: 1.5em;
+  font-size: 1.6em;
 }
 
 /* Hero Styles */
@@ -356,57 +375,70 @@
 
 /* portfolio */
 
+.portfolio-heading h2 {
+  width: 100%;
+  text-align: left; 
+  margin: 5% 7.5%;
+  padding-bottom: 1em;
+  font-size: 2em;
+}
+
   
-.portfolio-grid {
-  grid-template-columns: repeat(6, minmax(400px, 1fr));
-  padding: 0 25px 20px 25px;    
- 
+.portfolio-items-wrapper {
+  grid-template-columns: repeat(6, minmax(350px, 1fr));
+  padding: 0 4%; 
+  justify-content: flex-start;
+  margin: 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 
-.portfolio-grid::-webkit-scrollbar-thumb {
+
+.portfolio-items-wrapper::-webkit-scrollbar-thumb {
   background-color: #888;
   border-radius: 10px;
 }
 
-.portfolio-item {
-  border-radius: 8px;
- 
-  color: #333;
-}
-
-
 .portfolio-item img {
-  height: 350px;
-  width: auto;
- 
+  height: auto;
+  width: 300px;
 }
+
+.portfolio-description {
+  font-size: 1rem;
+  color: #777777; /* or any color you prefer */
+  margin-top: 10px; /* add some spacing between title and description */
+  width: 300px;
+  line-height: 1.3;
+  text-align: center;
+}
+
 
 .portfolio-title {
   font-size: 22px;
   color: var(--primary-color); 
   display: flex;
-  margin-top: 40px; 
-}
-
-.portfolio-description {
-  font-size: 18px;
-  font-weight: 400;
-  margin-top: 20px; /* add some spacing between title and description */
-  width: 350px;
-  line-height: 1.5;
- 
 }
 
 
 /* about section */
 
 
+.about-heading h2 {
+  width: 100%;
+  text-align: left; 
+  margin: 0 7%;
+  font-size: 1em;
+}
+
 .about-container {
  
   margin-top: 0;
 
 }
+
+
 
 .about-grid {
 
@@ -416,10 +448,10 @@
 }
 
 .about-img img {
-  width: 50%; /* make the image smaller */
+  width: 100%; /* make the image smaller */
   height: auto;
-  margin: 1% auto; /* center the image horizontally */
-  padding: 5%; /* add some whitespace around the image */
+  margin: 0; 
+  padding: 5%; 
   padding-bottom: 0;
 }
 
@@ -427,13 +459,13 @@
 
 .about-img p {
   font-size: 16px;
-  margin: 0; /* center the image horizontally */
-  padding: 1% 5%; /* add some whitespace around the image */
+  margin: 0; 
+  padding: 1% 5%;
 }
 
 
 .about-text {
-  max-width: 800px;
+  max-width: 100%;
   
 }
 
@@ -445,9 +477,10 @@
 }
 
 .about-text p {
-  margin: 1% auto;
-  padding: 1% 5%;
-  font-size: 1.1em;
+  width: 90%;
+  margin: 1% 0;
+  padding: 2.5% 5%;
+  font-size: 1.5em;
   line-height: 1.5;
   font-weight: 400;
 
@@ -455,7 +488,7 @@
 
 /* drop cap effect */
 .about-text p:first-of-type::first-letter {
-  font-size: 400%;
+  font-size: 300%;
  
 }
 
@@ -464,10 +497,10 @@
 /* contact section */
 
 .contact-container {
-  margin: 5% 0;
-  width: 90%; 
-  padding: 5%;
-  padding-top: 0;
+  margin: 0;
+  width: 100%; 
+  padding: 7.5%;
+  padding-top: 5%;
   
 }
 
@@ -526,7 +559,7 @@
   
    /* Navbar Styles */
    .navbar {
-    padding: 20px;
+    padding: 15px;
     
   }
   
@@ -541,14 +574,14 @@
   }
   
   .navbar-links li {
-    margin: 0 20px;
-    font-size: 16px;
+    margin: 0 10px;
+    font-size: 1em;
     margin-top: 5px;
   }
 
   .navbar-buttons .dark-mode-toggle {
     margin-top: 4px;
-    font-size: 1.5em;
+    font-size: 1.1em;
   }
   
   /* Hero Styles */
@@ -560,6 +593,7 @@
   .hero-content {
     width: 100%;
     margin-left: 10%;
+    padding: 0;
   }
   
   .hero h1 {
@@ -594,76 +628,84 @@
   
   /* portfolio */
 
-
-  .section-heading {
-    margin: 60px 0 40px 0;
+  .portfolio-heading h2 {
+    width: 100%;
+    text-align: left; 
+    margin: 5%;
+    margin-bottom: 2.5%;
+    font-size: 2em;
   }
   
     
-  .portfolio-grid {
- 
-    grid-template-columns: repeat(6, minmax(400px, 1fr));
-    grid-gap: 5%;
-    padding: 0 5%; 
-    margin: auto 0;
+  .portfolio-items-wrapper {
+    grid-template-columns: repeat(6, minmax(425px, 1fr));
+    padding: 0 40px; 
+    justify-content: flex-start;
+    margin: 0;
+    overflow-y: hidden;
     overflow-x: scroll;
-
-   
   }
   
-  
-  .portfolio-grid::-webkit-scrollbar-thumb {
+  .portfolio-items-wrapper::-webkit-scrollbar-thumb {
     background-color: #888;
     border-radius: 10px;
   }
   
-  .portfolio-item {
-    border-radius: 8px;
-   
-    color: #333;
-  }
-  
-  
   .portfolio-item img {
-    height: 400px;
-    width: auto;
-   
-  }
-  
-  .portfolio-title {
-    font-size: 1.7em;
-    color: var(--primary-color); 
-    display: flex;
-    margin-top: 40px; 
+    height: auto;
+    width: 375px;
   }
   
   .portfolio-description {
-    font-size: 1.3em;
-    font-weight: 400;
-    margin: 40px; /* add some spacing between title and description */
+    font-size: 1rem;
+    color: #777777; /* or any color you prefer */
+    margin-top: 10px; /* add some spacing between title and description */
     width: 350px;
     line-height: 1.5;
-   
+    text-align: center;
   }
+  
+  
+  
+  .portfolio-title {
+    font-size: 1.2em;
+    color: var(--primary-color); 
+    display: flex;
+    
+  }
+  
   
   
   /* about section */
   
+
+  .about-heading {
+    width: 100%;
+    text-align: left; 
+    padding-top: 1em;
+    margin-left: 5%;
+  }
+
   .about-container {
    
     margin-top: 0;
   
   }
 
+  .about-grid {
+    padding: 25px 50px;
+    display: flex; /* make the grid a flex container */
+    align-items: start; /* align the items to start from the same point at the top */
+  }
 
-  .about-img { 
-    margin-top: 10%;
-    padding-left: 5%;
-   
+
+  .about-img {
+    flex: 1; /* distribute space equally between the img and the text */
+    margin-top: 16px;
   }
   
   .about-img img {
-    width: 95%; 
+    width: 100%; 
     height: auto;
   }
   
@@ -674,31 +716,18 @@
     margin: 0; 
 
   }
-
-  .about-grid {
-    gap: 0;
-  }
-  
   
   .about-text {
-
-    padding: 0;
-    margin: 7.5% 0;
+    flex: 1; /* distribute space equally between the img and the text */
   }
   
-  .about-text h2 {
-    margin: auto;
-    font-size: 2em;
-    padding: 2.5% 5%; 
-  
-  }
   
   .about-text p {
-    width: 475px ;
-    margin: 1% auto; 
-    padding-bottom: 3% ; 
-    font-size: 1.1em;
-    line-height: 1.55;
+    width: 500px; 
+    margin: 1% 0; 
+    padding-bottom: 5% ; 
+    font-size: 1em;
+    line-height: 1.6;
     font-weight: 400;
   
   }
@@ -717,17 +746,17 @@
   }
  
   .contact-container h2 {
-    font-size: 2.25em;
+    font-size: 2em;
   }
   
   .contact-container p {
-    font-size: 20px;
+    font-size: 18px;
     padding-bottom: 32px;
    
   }
   
   .form-group input, .form-group textarea {
-    width: 100%;
+    width: 90%;
     font-size: 20px;
     padding: .75em;
     border: 1px solid var(--primary-color);
@@ -736,7 +765,7 @@
   
   .form-group label {
   
-    font-size: 24px;
+    font-size: 18px;
   }
   
   #confirmation {
