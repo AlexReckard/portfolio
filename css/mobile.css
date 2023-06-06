@@ -17,7 +17,7 @@
     background-color: var(--primary-color);
     padding: 10px;
     opacity: 0;
-    overflow: hidden;
+    
     z-index: 9998;
     /* Initialize the clip-path to be a small circle at the top right */
     clip-path: circle(0 at 100% 0);
@@ -77,12 +77,16 @@
   }
   
   .navbar-buttons .hamburger-toggle {
-    display: block
+    display: block;
+    margin: 0 10px;
+    padding: 0;
+  
   }
 
   .navbar-buttons .dark-mode-toggle {
     font-size: 16px;
-    margin-top: 0;
+    margin: 2px 0 0 0;
+    padding: 0;
   }
   
   /* Hero Styles */
