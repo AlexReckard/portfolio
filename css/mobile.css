@@ -203,11 +203,6 @@
   
   }
   
-  /* drop cap effect */
-  .about-text p:first-of-type::first-letter {
-    font-size: 400%;
-   
-  }
 
 
 
@@ -458,11 +453,6 @@
 
 }
 
-/* drop cap effect */
-.about-text p:first-of-type::first-letter {
-  font-size: 400%;
- 
-}
 
 
 
@@ -708,11 +698,6 @@
   
   }
   
-  /* drop cap effect */
-  .about-text p:first-of-type::first-letter {
-    font-size: 300%;
-   
-  }
   
   
   
