@@ -1,45 +1,50 @@
-/* Meyer's CSS Reset */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
   margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
   text-decoration: none;
-  color: inherit;
-}
 
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
 body {
-  line-height: 1;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
-
-ol, ul {
-  list-style: none;
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
 }
-
-blockquote, q {
-  quotes: none;
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
 }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
 }
 
 
@@ -97,11 +102,7 @@ table {
      
     }
 
-    main {
-      
-        margin: 0 auto;
-      
-    }
+
 
 
 
@@ -120,32 +121,31 @@ table {
 }
 
   
-  .navbar-logo {
+  .navbar-logo a {
     font-size: 21px;
     font-weight: 600;
     font-style: normal;
-    line-height: 24px;
     letter-spacing: 1.2px;
-    
+    color: var(--secondary-color);
+    margin-left: .5em;
   }
   
   .navbar-links {
     list-style: none;
     display: flex;
     margin-left: auto;
+    align-items: center;
   }
   
   .navbar-links li {
     font-size: 1em;
     font-style: normal;
     font-weight: 500;
-    line-height: 22px;
     margin-right: 20px;
-    margin-top: 5px;
+   
   }
   
   .navbar-links li a {
-    text-decoration: none;
     color: var(--secondary-color);
     position: relative;
   }
@@ -164,21 +164,22 @@ table {
   .navbar-links li a.active::after {
     transform: scaleX(1);
   }
+
+  .navbar-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
   
   
   .navbar-buttons button {
+   
     background-color: transparent;
     border: none;
     cursor: pointer;
-    
     font-size: 20px;
     color: var(--secondary-color);
   }
-
-  .navbar-buttons .dark-mode-toggle {
-    margin-top: 2px;
-  }
-
 
   .navbar-buttons .hamburger-toggle {
     display: none;
@@ -222,7 +223,7 @@ table {
   }
   
   .hero h1 {
-    font-size: 64px;
+    font-size: 60px;
     font-weight: 600;
     font-style: normal;
     line-height: 52px;
@@ -363,12 +364,13 @@ body.dark-mode .portfolio-title {
   
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Create two equally wide columns */
-  max-width: 1200px;
+  max-width: 1100px;
 }
 
 .about-img img {
   max-width: 500px; 
   height: auto;
+
 }
 
 .about-img p {
@@ -399,23 +401,23 @@ body.dark-mode .portfolio-title {
 /* contact section */
 
 .contact-container {
-  max-width: 500px;
-  margin: 3em auto;
-  padding: 3em ;
+  width: 50%;
+  margin: 2em auto;
+  padding: 1em ;
 }
 
 .contact-container h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
   font-weight: 600;
-  line-height: 1.5;
+
 }
 
 .contact-container p {
   font-size: 1em;
   padding-bottom: 20px;
   font-weight: 400;
-  line-height: 1.5;
+  
 }
 
 .form-group {

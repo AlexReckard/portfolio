@@ -73,7 +73,7 @@
 
   
   .navbar-links li {
-    margin: 10px;
+    margin: 10px 20px;
     opacity: 0;
     transition: opacity 0.5s ease;
   }
@@ -115,20 +115,21 @@
   }
   
   .hero h1 {
-    font-size: 48px;
+    font-size: 56px;
+    
   }
   
   .hero p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
-    max-width: 315px;
+    max-width: 300px;
     line-height: 1.5;
   }
   
   .hero .btn {
     font-size: 1rem;
     font-weight: 600;
-    padding: 8px 16px;
+    padding: 8px 12px;
   }
 
 
@@ -222,8 +223,8 @@
   .about-text p {
     width: 90%; 
     margin: 1% auto; 
-    padding: 3%; 
-    font-size: 16px;
+    padding: 3% 0; 
+    font-size: 1rem;
     line-height: 1.7;
     font-weight: 400;
   
@@ -243,7 +244,7 @@
   .contact-container {
     width: 90%; 
  
-    padding: 0 5%;
+    padding: 3em 0;
   }
 
   .form-group input, .form-group textarea {
@@ -352,7 +353,6 @@
 
 .navbar-buttons .dark-mode-toggle {
   font-size: 1.5em;
-  margin-top: 0;
 }
 
 /* Hero Styles */
@@ -362,7 +362,7 @@
 
 
 .hero-content {
-  width: 100%;
+
   margin-left: 10%;
 }
 
@@ -371,16 +371,9 @@
 }
 
 .hero p {
-  font-size: 24px;
-  max-width: 400px;
-  line-height: 1.5;
+  max-width: 50%;
 }
 
-.hero .btn {
-  font-size: 20px;
-
-  padding: 8px 16px;
-}
 
 .hero-links p {
   
@@ -394,8 +387,8 @@
 
   
 .portfolio-grid {
-  grid-template-columns: repeat(6, minmax(400px, 1fr));
-  padding: 0 25px 20px 20px;
+  grid-template-columns: repeat(6, minmax(350px, 1fr));
+  padding: 10px 25px 30px 25px;
  
 }
 
@@ -412,24 +405,10 @@
 }
 
 
-.portfolio-item img {
-  height: 350px;
-  width: auto;
- 
-}
-
-.portfolio-title {
-  font-size: 22px;
-  color: var(--primary-color); 
-  display: flex;
-  margin-top: 40px; 
-}
-
 .portfolio-description {
-  font-size: 18px;
   font-weight: 400;
-  margin-top: 20px; /* add some spacing between title and description */
-  width: 350px;
+  font-size: .9rem;
+  width: 300px;
   line-height: 1.5;
  
 }
@@ -485,8 +464,8 @@
 
 .about-text p {
   margin: 0;
-  padding: 1% 0;
-  font-size: 14px;
+  padding: 0 0 .5rem 0;
+  font-size: .9rem;
   line-height: 1.5;
   font-weight: 400;
   box-sizing: border-box;
@@ -506,10 +485,9 @@
 /* contact section */
 
 .contact-container {
-  margin: 5% 0;
-  width: 90%; 
-  padding: 5%;
-  padding-top: 0;
+  width: 70%; 
+  padding: 5% 0;
+ 
   
 }
 
@@ -525,8 +503,7 @@
 
 .form-group input, .form-group textarea {
   width: 100%;
-  font-size: 20px;
-  padding: .75em;
+
   border: 1px solid var(--primary-color);
   background: var(--secondary-color);
 }
@@ -541,15 +518,9 @@
  
 }
 
-#confirm-msg {
-  font-size: 20px;
-}
 
-.submit-btn { 
-  font-size: 20px;
-  padding: 1em 2em;
-  
-}
+
+
 
 #button-cover {
   width: 30%;
@@ -578,13 +549,11 @@
   }
   
   .navbar-links li {
-    margin: 0 20px;
-    font-size: 16px;
     margin-top: 5px;
   }
 
   .navbar-buttons .dark-mode-toggle {
-    margin-top: 4px;
+
     font-size: 1.2em;
   }
   
@@ -597,19 +566,17 @@
   
   .hero-content {
     width: 100%;
-    margin-left: 10%;
+    margin-left: 25%;
   }
   
   .hero h1 {
-    font-size: 4em;
-    padding-bottom: 16px;
+    font-size: 3em;
+    
   }
   
   .hero p {
-    font-size: 1.5em;
-    max-width: 50%;
-    line-height: 1.5;
-    padding-bottom: 16px;
+    font-size: 1.3em;
+    max-width: 45%;
   }
   
   .hero .btn {
@@ -641,7 +608,6 @@
   .portfolio-grid {
  
     grid-template-columns: repeat(6, minmax(400px, 1fr));
-    grid-gap: 5%;
     padding: 0 5%; 
     margin: auto 0;
     overflow-x: scroll;
@@ -662,12 +628,7 @@
   }
   
   
-  .portfolio-item img {
-    height: 400px;
-    width: auto;
-   
-  }
-  
+
   .portfolio-title {
     font-size: 1.7em;
     color: var(--primary-color); 
@@ -676,11 +637,11 @@
   }
   
   .portfolio-description {
-    font-size: 1.3em;
+    
     font-weight: 400;
-    margin: 40px; /* add some spacing between title and description */
+    margin-bottom: 1.5rem;
     width: 350px;
-    line-height: 1.5;
+   
    
   }
   
@@ -746,7 +707,8 @@
   
   /* contact section */
   .contact-container {
-    max-width: 600px;
+    width: 60%;
+    padding-bottom: 2.5em;
   }
  
   .contact-container h2 {
@@ -761,31 +723,18 @@
   
   .form-group input, .form-group textarea {
     width: 100%;
-    font-size: 20px;
-    padding: .75em;
     border: 1px solid var(--primary-color);
     background: var(--secondary-color);
   }
   
-  .form-group label {
-  
-    font-size: 24px;
-  }
+
   
   #confirmation {
     width: 3%;
    
   }
-  
-  #confirm-msg {
-    font-size: 20px;
-  }
-  
-  .submit-btn { 
-    font-size: 20px;
-    padding: 1em 2em;
-    
-  }
+
+
   
   #button-cover {
     width: 30%;
